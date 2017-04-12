@@ -1,0 +1,1 @@
+ampy --port %port% put "%inpath%\light.py"

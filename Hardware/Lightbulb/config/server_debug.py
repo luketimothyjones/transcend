@@ -1,0 +1,2 @@
+SERVER_DEBUG_MODE = False
+FLASH_IP = True
