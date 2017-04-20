@@ -19,10 +19,10 @@ def server_init(ip=IP, port=PORT):
     # :return: Socket, established as a listener
     # ----
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)        # Create the socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)            # Create the socket
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)      # Release socket on disconnect
     sock.bind((ip, port))
-    sock.listen(100)                                                # Begin listening for clients; length 100 queue
+    sock.listen(20)                                                                                # Begin listening for clients; length 20 queue
 
     cons_print('Server is up on port {}\n'.format(port))
     return sock
@@ -60,7 +60,7 @@ def server_loop(sock):
                 for p in data.split(r'\r\n'):
                     if 'Content-Length:' in p:
                         try:
-                            length = int(p.replace('Content-Length: ', '')) + 4
+                            length = min(1000, int(p.replace('Content-Length: ', '')) + 4)
                             data = str(conn.recv(length))[2:-1]
                             cons_print(data)
                             break

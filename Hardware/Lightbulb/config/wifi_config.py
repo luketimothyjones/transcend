@@ -1,0 +1,3 @@
+# WIFI_SSIDS = [[SSID, PASSWORD], [SSID2, PASSWORD2]
+
+WIFI_SSIDS = [ ['  ', '  '] ]

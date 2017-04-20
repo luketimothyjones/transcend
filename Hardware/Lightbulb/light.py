@@ -73,23 +73,6 @@ def get_config():
         return json.dumps('{"Error": "No config file found"}')
 
 # ------
-def restore():
-    pass
-
-    # # Restores to config from before boot
-    # conf = get_config()
-    # err = conf.get('Error')
-    #
-    # if err:
-    #     cons_print('Error -', err)
-    #     cons_print('Restore failed, bad JSON')
-    #     return
-    #
-    # r, g, b = conf['color'].split(',')
-    # bri = conf['brightness']
-    # set_color(r, g, b, bri)
-
-# ------
 def set_color(r, g, b, brightness=50):
     # Set the color of the light
 

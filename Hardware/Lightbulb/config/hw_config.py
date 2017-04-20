@@ -47,6 +47,7 @@ LED_RED = esp.PWM(esp.Pin(15), freq=5000)
 LED_GREEN = esp.PWM(esp.Pin(13), freq=5000)
 LED_BLUE = esp.PWM(esp.Pin(12), freq=5000)
 
+
 # -------
 # Built in pin, used for acknowledging client connection
 LED_ACK = esp.Pin(2, esp.Pin.OUT)

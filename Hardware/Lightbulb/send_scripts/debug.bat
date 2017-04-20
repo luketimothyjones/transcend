@@ -1,1 +1,0 @@
-ampy --port %port% put "%inpath%\config\server_debug.py"

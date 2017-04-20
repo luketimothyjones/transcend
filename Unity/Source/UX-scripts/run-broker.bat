@@ -1,0 +1,1 @@
+START CMD /c "cd transcend_demo_Data\transcend-broker\ && run-broker"

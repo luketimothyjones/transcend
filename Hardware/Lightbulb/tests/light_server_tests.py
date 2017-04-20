@@ -3,7 +3,6 @@ import json
 import time
 
 IP = '192.168.1.35'
-# IP = '192.168.43.234'
 
 ENDPOINT = 'http://{}/light'.format(IP)
 
@@ -64,7 +63,7 @@ def main():
             res = ':: Pass' if a.status_code == expected else ':: Fail !! ({})'.format(a.reason)
             print(str(data).ljust(50, ' '), res)
 
-            time.sleep(.05)
+            time.sleep(.2)
 
 
 if __name__ == '__main__':

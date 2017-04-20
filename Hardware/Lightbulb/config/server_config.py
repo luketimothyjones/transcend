@@ -2,9 +2,6 @@
 IP = '0.0.0.0'
 PORT = 80
 
-# str, password to access the REPL
-REPL_PASS = 'standardpidgeonhockey'
-
 # -----
 # Establish our HTTP response codes
 _H400 = b'HTTP/1.1 400 Bad Request: '
