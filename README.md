@@ -38,7 +38,7 @@ The second part consists of two things:
 
 **Getting started with the ESP8266**
 
-I highly recommend grabbing a copy of Kolban's ESP8266 guide. It's available for free online, but hopefully you'll be persuaded to buy it once you have seen how incredible it is.
+I highly recommend grabbing a copy of [Kolban's ESP8266 guide](http://neilkolban.com/tech/esp8266/). It's available for free, but hopefully you'll be persuaded to buy Kolban a well-deserved coffee once you have seen how incredible it is.
 
 &nbsp;
 
