@@ -82,7 +82,7 @@ The broker will automatically import your module when it is first run. If you up
 
      - `wifi_config.py`   -  SSID connection info
 
-  - [/Hardware/Lightbulb/send\_scripts/](/Hardware/Lightbulb/send_scripts/)
+  - [/Hardware/Lightbulb/send_scripts/](/Hardware/Lightbulb/send_scripts/)
 
      - `run-script.bat`   -  Script runner (see doc. below)
 
@@ -144,7 +144,7 @@ The broker will automatically import your module when it is first run. If you up
 
 &nbsp;
 
-These are the available arguments for [/Hardware/Lightbulb/send\_scripts/run-script.bat](/Hardware/Lightbulb/send_scripts/run-script.bat), and refer to batch files in the scripts subdirectory. These scripts handle flashing code onto the microcontroller; it is best to flash only what has changed, as it will extend the life of your microcontroller's flash memory significantly. Additionally, flashing one file at a time is far faster.
+These are the available arguments for [/Hardware/Lightbulb/send_scripts/run-script.bat](/Hardware/Lightbulb/send_scripts/run-script.bat), and correspond with batch files in the [scripts]([/Hardware/Lightbulb/send_scripts/scripts) subdirectory. These scripts handle flashing code onto the microcontroller; it is best to flash only what has changed, as it will extend the life of your microcontroller's flash memory significantly. Additionally, flashing one file at a time is far faster.
 
 Most of the scripts are intuitive, as they match the respective filenames, but there are a few scripts that need some explanation:
 
