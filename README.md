@@ -1,0 +1,145 @@
+**Building and running the demo game:**
+
+1) Install the Unity game editor
+
+2) Clone this repository and open `/Unity/Source/Senior-Project/` as the project folder
+
+3) Set the build destination to `/Unity/Build/`
+
+4) Set the platform to Windows (x86\_64, because who runs 32-bit anymore?)
+
+5) Set the output file to `transcend_demo` and press Build
+
+6) Run `/Unity/Source/finalize-build.bat`
+
+7) Run `/Unity/Build/open-config.bat` and configure your networked devices
+
+8) Run `/Unity/Build/run-broker.bat`
+
+9) Run `/Unity/Build/transcend_demo.exe`
+
+&nbsp;
+
+**Getting started with the ESP8266**
+
+I highly recommend grabbing a copy of Kolban's ESP8266 guide. It's available for free online, but hopefully you'll be persuaded to buy it once you have seen how incredible it is.
+
+&nbsp;
+
+**Adding new device modules**
+
+1) Refer to [basedevice.py](/Unity/Source/transcend-broker/user_modules/basedevice.py) and [BasicRGBLight.py](/Unity/Source/transcend-broker/user_modules/BasicRGBLight.py) for implementing the Python module
+
+2) Add your new device module to `/Unity/Build/transcend_demo_Data/transcend-broker/user_modules/`
+
+3) Add your device configuration to `/Unity/Build/transcend_demo_Data/transcend-broker/config/devices.cfg` by following the documentation at the top of said file
+
+The broker will automatically import your module when it is first run. If you update the module while the broker is running, you will need to restart the broker. The game does not need to be restarted, as it exists independently from the broker.
+
+&nbsp;
+
+**Files and descriptions**
+
+[/Hardware/Lightbulb/](/Hardware/Lightbulb/)
+
+  - `boot.py`    -  Empty; silences MicroPython complaint
+
+  - `helpers.py`    -  System helper functions
+
+  - `light.py`    -  LED commands &amp; data processing
+
+  - `main.py`    -  Device boot handler
+
+  - `responder.py`    -  Connection handling
+
+  - `server.py`    -  Server initialization &amp; main loop
+
+   - [/Hardware/Lightbulb/config/](/Hardware/Lightbulb/config/)
+
+     - `hw_config.py`   -  WiFi setup, LED pin assignment
+
+     - `server_config.py`  -  IP and port, HTTP responses
+
+     - `server_debug.py`  -  Serial printing &amp; IP flashing
+
+     - `wifi_config.py`   -  SSID connection info
+
+  - [/Hardware/Lightbulb/send\_scripts/](/Hardware/Lightbulb/send_scripts/)
+
+     - `run-script.bat`   -  Script runner (see doc. below)
+
+    - [/Hardware/Lightbulb/send_scripts/scripts/](/Hardware/Lightbulb/send_scripts/scripts)   -  See documentation at bottom of this file
+
+  - [/Hardware/Lightbulb/stubs/](/Hardware/Lightbulb/stubs)     -  Stub modules for PC-side server testing (mocks for ESP8266-specific libraries)
+
+  - [/Hardware/Lightbulb/tests/](/Hardware/Lightbulb/tests)     -  Tests for the lightbulb
+
+&nbsp;
+
+[/Unity/Source/](/Unity/Source)
+
+  - `finalize-build.bat`   -  Copy UX-scripts to game build folder
+  
+  - [/Unity/Source/UX-scripts/](/Unity/Source/UX-scripts)    -  Scripts to simplify configuration
+
+  - [/Unity/Source/transcend-broker/](/Unity/Source/transcend-broker)
+
+    - `run-broker.bat` -  Run the broker (using a portable Python install [/Unity/Source/transcend-broker/broker/venv/](/Unity/Source/transcend-broker/broker/venv/)
+
+  - [/Unity/Source/transcend-broker/config/](/Unity/Source/transcend-broker/config)
+
+    - `device.cfg` -  Device connection information
+
+    - `transcend.cfg` -  Broker <--> Unity communication settings
+
+  - [/Unity/Source/transcend-broker/broker/](/Unity/Source/transcend-broker/broker)
+
+    - `transcend-broker.py`   -  Broker
+
+  - [user\_modules](/Unity/Source/transcend-broker/user_modules)/
+
+    - `basedevice.py`  -  TranscendDevice superclass
+
+    - `BasicRGBLight.py` -  Subclass for our lightbulb
+
+  - [/Unity/Source/Senior-Project/Assets/Scripts/](/Unity/Source/Senior-Project/Assets/Scripts)
+
+    - `BasicPlayerController.cs` -  Player mouse movement
+
+    - `Crosshair.cs`   -  Crosshair manager
+
+    - `MouseKiller.cs`  -  Mouse hider
+
+    - `TranscendObject.cs`  -  Game object <--> device module (via broker)
+
+    - `TranscendTrigger.cs`  -  Game object input handler
+
+&nbsp;
+
+**Send scripts documentation**
+
+**WARNING:** Flashing files without removing `main.py` from the microcontroller first ***MAY RESULT IN THE CURRUPTION OF THE MICROCONTROLLER'S FILESYSTEM.***
+
+**BEFORE FLASHING:** While `run-script.bat` attempts to fix this issue, it is best to connect to the REPL and make sure that the file has been deleted. This can be done in one line: import os; os.remove("main.py")
+
+**IF YOU IGNORE THIS:** Oops. Running `all` as per below; will fix the filesystem and restore the files. Try not to do it again; it's slow, annoying, and it makes the flash memory cry (seriously, flash has a limited lifespan, be courteous)
+
+&nbsp;
+
+These are the available arguments for [/Hardware/Lightbulb/send\_scripts/run-script.bat](/Hardware/Lightbulb/send_scripts/run-script.bat), and refer to batch files in the scripts subdirectory. These scripts handle flashing code onto the microcontroller; it is best to flash only what has changed, as it will extend the life of your microcontroller's flash memory significantly. Additionally, flashing one file at a time is far faster.
+
+Most of the scripts are intuitive, as they match the respective filenames, but there are a few scripts that need some explanation:
+
+ - `all`   -  Runs clean\_filesystem and then flashes all files
+
+ - `all_config`  -  Flashes all config files
+
+ - `clean_filesystem` -  Rebuilds the FAT filesystem by running utils/fix\_filesystem on the microcontroller. utils/ampy sometimes destroys the filesystem during `put` commands that freeze – use `all` to fix this instead of a direct call.
+
+ - `flash_firmware` -  Uses utils/esptool to flash utils/micropython-v1.8.7.bin to the microcontroller
+
+ - `set_path` -  Sets environment variables for use with the scripts above. This is called by `run-script.bat`, so don't bother running it manually.
+
+
+NOTE: The COM port configuration assumes that you only have one serial device (the microcontroller) connected at any given time.
+Additionally, this defaults to the range COM0-COM9, so if your system uses a higher COM port number, you'll need to tweak the for-loop.
