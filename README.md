@@ -1,6 +1,8 @@
 # Transcend
 #### Make communicating between Unity and IoT devices easy and extensible for both you and your players
 
+&nbsp;
+
 This repository contains what could be considered two different projects, as it was part of my (in retrospect) rather ambitious senior project.
 
 The first part is server software and flashing utilities for an ESP8266 microcontroller running MicroPython firmware, which corresponded with a real-world device that I made (converted an IR-controlled lightbulb into an IoT lightbulb by bypassing the original microcontroller). This can be found in [/Hardware/](/Hardware/).
