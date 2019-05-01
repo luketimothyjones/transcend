@@ -13,6 +13,9 @@ The second part consists of two things:
 
 2) Unity scripts that communicate with the broker control the in-game side of things. The scripts are a little hobbled together, as they were the last part of the project that I tackled and I was running out of time, but they serve as a decent reference for communicating with the broker via in-game interaction. This can be found in [/Unity/Source/Senior-Project/Assets/Scripts/](/Unity/Source/Senior-Project/Assets/Scripts/), namely [TranscendObject.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendObject.cs) and [TranscendTrigger.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendTrigger.cs).
 
+&nbsp;
+
+It is worth noting that this project was developed on Windows and, as such, the scripts that are provided to automate ESP8266-related tasks (such as flashing code, firmware, and doing automated bugfixing/quirk work-arounds) are batch files, and the provided copy of [Adafruit's Ampy](https://github.com/pycampers/ampy) is a Windows executable. With that said, it would be quite trivial to convert the batch files to shell scripts, and Ampy is available for all platforms via `pip`.
 
 &nbsp;
 
@@ -24,7 +27,7 @@ The second part consists of two things:
 
 3) Set the build destination to `/Unity/Build/`
 
-4) Set the platform to Windows (x86\_64, because who runs 32-bit anymore?)
+4) Set the platform to `Windows` (x86\_64, because who runs 32-bit anymore?)
 
 5) Set the output file to `transcend_demo` and press Build
 
