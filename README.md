@@ -1,3 +1,19 @@
+# Transcend
+#### Make communicating between Unity and IoT devices easy and extensible for both you and your players
+
+This repository contains what could be considered two different projects, as it was part of my (in retrospect) rather ambitious senior project.
+
+The first part is server software and flashing utilities for an ESP8266 microcontroller running MicroPython firmware, which corresponded with a real-world device that I made (converted an IR-controlled lightbulb into an IoT lightbulb by bypassing the original microcontroller). This can be found in [/Hardware/](/Hardware/).
+
+The second part consists of two things:
+
+1) Python middleware (hereafter referred to as the "broker") that uses a standardized module format to handle communicating between Unity and arbitrary IoT devices. Provided the Unity developer provides a consistent and well-documented API, custom modules for linking physical IoT devices with the in-game objects that the Unity developer exposes should be very easy to develop. This can be found in [/Unity/Source/transcend-broker/](/Unity/Source/transcend-broker/).
+
+2) Unity scripts that communicate with the broker control the in-game side of things. The scripts are a little hobbled together, as they were the last part of the project that I tackled and I was running out of time, but they serve as a decent reference for communicating with the broker via in-game interaction. This can be found in [/Unity/Source/Senior-Project/Assets/Scripts/](/Unity/Source/Senior-Project/Assets/Scripts/), namely [TranscendObject.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendObject.cs) and [TranscendTrigger.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendTrigger.cs).
+
+
+&nbsp;
+
 **Building and running the demo game:**
 
 1) Install the Unity game editor
