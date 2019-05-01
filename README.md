@@ -14,7 +14,7 @@ The second part consists of two things:
 
 &nbsp;
 
-**Building and running the demo game:**
+### Building and running the demo game
 
 1) Install the Unity game editor
 
@@ -36,13 +36,13 @@ The second part consists of two things:
 
 &nbsp;
 
-**Getting started with the ESP8266**
+### Getting started with the ESP8266
 
 I highly recommend grabbing a copy of [Kolban's ESP8266 guide](http://neilkolban.com/tech/esp8266/). It's available for free, but hopefully you'll be persuaded to buy Kolban a well-deserved coffee once you have seen how incredible it is.
 
 &nbsp;
 
-**Adding new device modules**
+### Adding new device modules
 
 1) Refer to [basedevice.py](/Unity/Source/transcend-broker/user_modules/basedevice.py) and [BasicRGBLight.py](/Unity/Source/transcend-broker/user_modules/BasicRGBLight.py) for implementing the Python module
 
@@ -54,7 +54,7 @@ The broker will automatically import your module when it is first run. If you up
 
 &nbsp;
 
-**Files and descriptions**
+### Files and descriptions
 
 [/Hardware/Lightbulb/](/Hardware/Lightbulb/)
 
@@ -132,7 +132,7 @@ The broker will automatically import your module when it is first run. If you up
 
 &nbsp;
 
-**Send scripts documentation**
+### Send scripts documentation
 
 **WARNING:** Flashing files without removing `main.py` from the microcontroller first ***MAY RESULT IN THE CURRUPTION OF THE MICROCONTROLLER'S FILESYSTEM.***
 
