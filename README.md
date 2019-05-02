@@ -23,7 +23,7 @@ It is worth noting that this project was developed on Windows and, as such, the 
 
 ### Building and running the demo game
 
-1) Install the Unity game editor
+1) Install Unity 5.5.2f1 [(Windows 64-bit installer download)](https://unity3d.com/get-unity/download?thank-you=update&download_nid=45968&os=Win). If you already have a newer version of Unity installed, you can try and open the project, but the automatic project upgrade may break things.
 
 2) Clone this repository and open `/Unity/Source/Senior-Project/` as the project folder
 
