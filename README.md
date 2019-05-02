@@ -17,13 +17,13 @@ The second part consists of two things:
 
 &nbsp;
 
-It is worth noting that this project was developed on Windows and, as such, the scripts that are provided to automate ESP8266-related tasks (such as flashing code, firmware, and doing automated bugfixing/quirk work-arounds) are batch files, and the provided copy of [Adafruit's Ampy](https://github.com/pycampers/ampy) is a Windows executable. With that said, it would be quite trivial to convert the batch files to shell scripts, and Ampy is available for all platforms via `pip`.
+It is worth noting that this project was developed on Windows and, as such, the scripts that are provided to automate ESP8266-related tasks (such as flashing code, firmware, and doing automated bug-fixing/quirkiness workarounds) are batch files, and the provided copy of [Adafruit's Ampy](https://github.com/pycampers/ampy) is a Windows executable. With that said, it would be quite trivial to convert the batch files to shell scripts, and Ampy is available for all platforms via `pip`.
 
 &nbsp;
 
 ### Building and running the demo game
 
-1) Install Unity 5.5.2f1 [(Windows 64-bit installer download)](https://unity3d.com/get-unity/download?thank-you=update&download_nid=45968&os=Win). If you already have a newer version of Unity installed, you can try and open the project, but the automatic project upgrade may break things.
+1) Install Unity 5.5.2f1 [(Windows 64-bit installer download)](https://unity3d.com/get-unity/download?thank-you=update&download_nid=45968&os=Win). If you already have a newer version of Unity installed, you can try and open the project, but the project importer may break things when it tries to upgrade the project.
 
 2) Clone this repository and open `/Unity/Source/Senior-Project/` as the project folder
 
