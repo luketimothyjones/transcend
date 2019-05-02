@@ -5,7 +5,7 @@
 
 ### Preface
 
-This repository contains what could be considered two different projects, as it was part of my (in retrospect) rather ambitious senior project.
+This repository contains what could be considered two different projects, as this was my (in retrospect) rather ambitious senior project.
 
 The first part is server software and flashing utilities for an [ESP8266 microcontroller](https://en.wikipedia.org/wiki/ESP8266) running [MicroPython firmware](https://micropython.org/), which corresponded with a real-world device that I made (converted an IR-controlled lightbulb into an IoT lightbulb by controlling the transistors directly using the aforementioned server software and an ESP-12E). This can be found in [/Hardware/](/Hardware/).
 
