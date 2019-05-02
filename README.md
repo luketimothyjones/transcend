@@ -107,7 +107,7 @@ The broker will automatically import your module when it is first run. If you up
 
   - [/Unity/Source/transcend-broker/](/Unity/Source/transcend-broker)
 
-    - `run-broker.bat` -  Run the broker (using a portable Python install [/Unity/Source/transcend-broker/broker/venv/](/Unity/Source/transcend-broker/broker/venv/)
+    - `run-broker.bat` -  Run the broker ([using the included portable Python install](/Unity/Source/transcend-broker/broker/venv/))
 
   - [/Unity/Source/transcend-broker/config/](/Unity/Source/transcend-broker/config)
 
@@ -119,7 +119,7 @@ The broker will automatically import your module when it is first run. If you up
 
     - `transcend-broker.py`   -  Broker
 
-  - [user\_modules](/Unity/Source/transcend-broker/user_modules)/
+  - [/Unity/Source/transcend-broker/user_modules/](/Unity/Source/transcend-broker/user_modules/)
 
     - `basedevice.py`  -  TranscendDevice superclass
 
