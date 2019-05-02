@@ -157,9 +157,9 @@ Most of the scripts are intuitive, as they match the respective filenames, but t
 
  - `all_config`  -  Flashes all config files
 
- - `clean_filesystem` -  Rebuilds the FAT filesystem by running utils/fix\_filesystem on the microcontroller. utils/ampy sometimes destroys the filesystem during `put` commands that freeze – use `all` to fix this instead of a direct call.
+ - `clean_filesystem` -  Rebuilds the FAT filesystem by running `utils/fix_filesystem` on the microcontroller. `utils/ampy` sometimes destroys the filesystem during `put` commands that freeze – use `all` to fix this.
 
- - `flash_firmware` -  Uses utils/esptool to flash utils/micropython-v1.8.7.bin to the microcontroller
+ - `flash_firmware` -  Uses `utils/esptool` to flash `utils/micropython-v1.8.7.bin` to the ESP8266; this is necessary before running anything else. A newer version of MicroPython will probably work fine, too; with that said, be aware that MicroPython is VERY memory-hungry, and the server will misbehave in odd ways if it is running out of memory.
 
  - `set_path` -  Sets environment variables for use with the scripts above. This is called by `run-script.bat`, so don't bother running it manually.
 
