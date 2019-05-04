@@ -13,7 +13,7 @@ The second part consists of two things:
 
 1) Python middleware (hereafter referred to as the "broker") that uses a standardized module format to handle communicating between Unity and arbitrary IoT devices. Provided the Unity developer provides a consistent and well-documented API, custom modules for linking physical IoT devices with the in-game objects that the Unity developer exposes should be very easy to develop. This can be found in [/Unity/Source/transcend-broker/](/Unity/Source/transcend-broker/).
 
-2) Unity scripts that communicate with the broker and control the in-game side of things. The scripts are a little hobbled together, as they were the last part of the project that I tackled and I was running out of time, but they serve as a decent functional reference. This can be found in [/Unity/Source/Senior-Project/Assets/Scripts/](/Unity/Source/Senior-Project/Assets/Scripts/), namely [TranscendObject.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendObject.cs) and [TranscendTrigger.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendTrigger.cs).
+2) Unity scripts that communicate with the broker and control the in-game side of things. The scripts are a little hobbled together, as they were the last part of the project that I tackled and I was running out of time, but they serve as a decent functional reference. These can be found in [/Unity/Source/Senior-Project/Assets/Scripts/](/Unity/Source/Senior-Project/Assets/Scripts/), namely [TranscendObject.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendObject.cs) and [TranscendTrigger.cs](/Unity/Source/Senior-Project/Assets/Scripts/TranscendTrigger.cs).
 
 &nbsp;
 
