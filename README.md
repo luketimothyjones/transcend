@@ -143,9 +143,9 @@ The broker will automatically import your module when it is first run. If you up
 
 **WARNING:** Flashing files without removing `main.py` from the microcontroller first ***MAY RESULT IN THE CURRUPTION OF THE MICROCONTROLLER'S FILESYSTEM.***
 
-**BEFORE FLASHING:** While `run-script.bat` attempts to fix this issue, it is best to connect to the REPL and make sure that the file has been deleted. This can be done in one line: import os; os.remove("main.py")
+**BEFORE FLASHING:** While `run-script.bat` attempts to fix this issue, it is best to connect to the REPL and make sure that the file has been deleted. This can be done in one line: `import os; os.remove("main.py")`
 
-**IF YOU IGNORE THIS:** Oops. Running `all` as per below; will fix the filesystem and restore the files. Try not to do it again; it's slow, annoying, and it makes the flash memory cry (seriously, flash has a limited lifespan, be courteous)
+**IF YOU IGNORE THIS:** Oops. Running `all` as per below will fix the filesystem and restore the files. Try not to do it again; it's slow, annoying, and it makes the flash memory cry (seriously, flash has a limited lifespan, be courteous)
 
 &nbsp;
 
