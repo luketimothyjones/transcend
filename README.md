@@ -35,7 +35,7 @@ It is worth noting that this project was developed on Windows and, as such, the 
 
 6) Run `/Unity/Source/finalize-build.bat`
 
-7) Run `/Unity/Build/open-config.bat` and configure your networked devices
+7) Run `/Unity/Build/open-config.bat` and provide the information for your lightbulb (or other device, if you have written a custom module)
 
 8) Run `/Unity/Build/run-broker.bat`
 
